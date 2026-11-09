@@ -261,10 +261,10 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .reels-hint { font-size: 0.95rem; color: var(--muted); margin-top: 6px; }
 
 .feature {
-  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(28px, 6vw, 80px); align-items: center;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(28px, 6vw, 80px); align-items: center;
 }
 .feature video { width: clamp(240px, 30vw, 360px); aspect-ratio: 9 / 16; object-fit: cover; background: #1C110C; }
-.feature.wide { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+.feature.wide { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); }
 .feature.wide video { width: 100%; aspect-ratio: 16 / 9; }
 .feature h2 { font-size: clamp(2.6rem, 6vw, 5rem); margin-bottom: 18px; }
 .feature p { font-size: 1.1rem; color: var(--muted); }

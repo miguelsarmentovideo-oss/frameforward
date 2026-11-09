@@ -106,7 +106,7 @@ def contact_buttons(dark=True):
 
 
 RESULTS = [
-    ("1,6M", "visninger", "Nabo Gastro Bar", "Én reel – på tre dager.", "https://www.instagram.com/p/DeZ7gc3M0_P/", "Se reelen"),
+    ("3M", "visninger", "Nabo Gastro Bar", "Én reel som gikk viralt.", "https://www.instagram.com/p/DeZ7gc3M0_P/", "Se reelen"),
     ("+600", "følgere", "Bjerck Restaurant & Bar", "Nye følgere fra én enkelt reel.", "https://www.instagram.com/p/DdYhu_Zuh5x/", "Se reelen"),
     ("28K+", "følgere", "Handball Premium", "Bygget fra null følgere.", "https://www.instagram.com/handballpremium/", "Se kontoen"),
 ]
@@ -263,32 +263,32 @@ def work():
 
 <section class="chapter">
   <div class="wrap feature wide">
-    {vid("restaurant-6-wide", "restaurant-6-wide", "Kjøkkenet bak kulissene")}
     <div>
       <h2>Bak kulissene</h2>
       <p>Liggende format for nettsider, skjermer og YouTube – samme stemning, større lerret.</p>
     </div>
+    {vid("restaurant-6-wide", "restaurant-6-wide", "Kjøkkenet bak kulissene")}
   </div>
 </section>
 
 <section class="chapter">
   <div class="wrap feature">
-    {vid("eventer-nores", "eventer-nores", "Event-reel fra en vinsmaking")}
     <div>
       <h2>Eventer</h2>
       <p>Vinsmaking – en hel kveld fortalt på litt over ett minutt. Folk, produkter og stemning, klippet så neste event selger seg selv.</p>
       <a class="btn" href="../contact/">Book eventdekning</a>
     </div>
+    {vid("eventer-nores", "eventer-nores", "Event-reel fra en vinsmaking")}
   </div>
 </section>
 
 <section class="chapter">
   <div class="wrap feature">
-    {vid("uteliv-old-irish-pub", "uteliv-old-irish-pub", "Vertikal video fra The Old Irish Pub")}
     <div>
       <h2>Uteliv</h2>
       <p>The Old Irish Pub – livemusikk, fullt lokale og energien som får folk til å komme tilbake neste helg.</p>
     </div>
+    {vid("uteliv-old-irish-pub", "uteliv-old-irish-pub", "Vertikal video fra The Old Irish Pub")}
   </div>
 </section>
 
@@ -304,11 +304,11 @@ def work():
 
 <section class="chapter">
   <div class="wrap feature wide">
-    {vid("dronefilm", "dronefilm", "Dronefilm av et boligområde")}
     <div>
       <h2>Dronefilm</h2>
       <p>Luftfoto og dronevideo for eiendom, hoteller og beliggenheter som fortjener å ses ovenfra.</p>
     </div>
+    {vid("dronefilm", "dronefilm", "Dronefilm av et boligområde")}
   </div>
 </section>
 
@@ -382,7 +382,7 @@ def impact():
 </section>
 """
     return page("proven-impact/", "Resultater – prisvinnende sosiale medier i Bergen — Frame Forward",
-                "Vinner av «SoMe Company of the Year» på Digitaldagen Bergen (PwC) for Villani Skostredet. Sider bygget fra null til tusenvis av følgere – og reels med over 1,6 millioner visninger.",
+                "Vinner av «SoMe Company of the Year» på Digitaldagen Bergen (PwC) for Villani Skostredet. Sider bygget fra null til tusenvis av følgere – og en reel med over 3 millioner visninger.",
                 body, "proven-impact/")
 
 
