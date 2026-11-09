@@ -14,7 +14,7 @@ ICON_WA = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path
 ICON_PHONE = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>'
 ICON_MAIL = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>'
 
-NAV = [("", "Hjem"), ("ourwork/", "Vårt arbeid"), ("produktfoto/", "Produktfoto"), ("proven-impact/", "Resultater")]
+NAV = [("", "Hjem"), ("ourwork/", "Vårt arbeid"), ("proven-impact/", "Resultater")]
 
 
 def page(path, title, desc, body, active, root=None):
@@ -294,16 +294,12 @@ def work():
 </section>
 
 <section class="chapter">
-  <div class="wrap feature">
+  <div class="wrap feature wide">
     <div>
-      <h2>Produktfoto</h2>
-      <p>Produktbilder for olivenoljeprodusenten Oliven – fotografert av oss, og videreutviklet med A.I. Se original og A.I.-versjon side om side.</p>
-      <a class="btn" href="../produktfoto/">Se produktfoto</a>
+      <h2>Dronefilm</h2>
+      <p>Luftfoto og dronevideo for eiendom, hoteller og beliggenheter som fortjener å ses ovenfra.</p>
     </div>
-    <div class="pair-teaser">
-      <img src="../img/oliven/oliven-golden-original.jpg" alt="Oliven Golden Selection – originalfoto" loading="lazy" width="1000" height="1500">
-      <img src="../img/oliven/oliven-golden-ai.jpg" alt="Oliven Golden Selection – A.I.-versjon" loading="lazy" width="1000" height="1500">
-    </div>
+    {vid("dronefilm", "dronefilm", "Dronefilm av et boligområde")}
   </div>
 </section>
 
@@ -318,12 +314,16 @@ def work():
 </section>
 
 <section class="chapter">
-  <div class="wrap feature wide">
+  <div class="wrap feature">
     <div>
-      <h2>Dronefilm</h2>
-      <p>Luftfoto og dronevideo for eiendom, hoteller og beliggenheter som fortjener å ses ovenfra.</p>
+      <h2>Produktfoto</h2>
+      <p>Produktbilder for olivenoljeprodusenten Oliven – fotografert av oss, og videreutviklet med A.I. Se original og A.I.-versjon side om side.</p>
+      <a class="btn" href="../produktfoto/">Se produktfoto</a>
     </div>
-    {vid("dronefilm", "dronefilm", "Dronefilm av et boligområde")}
+    <div class="pair-teaser">
+      <img src="../img/oliven/oliven-golden-original.jpg" alt="Oliven Golden Selection – originalfoto" loading="lazy" width="1000" height="1500">
+      <img src="../img/oliven/oliven-golden-ai.jpg" alt="Oliven Golden Selection – A.I.-versjon" loading="lazy" width="1000" height="1500">
+    </div>
   </div>
 </section>
 
