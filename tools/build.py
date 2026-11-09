@@ -439,7 +439,7 @@ def main():
     (SITE / "proven-impact" / "index.html").write_text(impact(), encoding="utf-8")
     (SITE / "contact" / "index.html").write_text(contact(), encoding="utf-8")
     (SITE / "404.html").write_text(notfound(), encoding="utf-8")
-    (SITE / "CNAME").write_text("frameforward.no\n")
+    # The CNAME file (frameforward.no) is added when the domain is moved from Squarespace.
     (SITE / ".nojekyll").write_text("")
     (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n")
     urls = "".join(f"<url><loc>{DOMAIN}/{p}</loc></url>" for p in ["", "ourwork/", "proven-impact/", "contact/"])
