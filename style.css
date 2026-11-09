@@ -344,3 +344,17 @@ p { margin: 0 0 1em; max-width: 62ch; }
   html { scroll-behavior: auto; }
   .phone { transform: none; }
 }
+
+/* ---------- Product photography ---------- */
+.compare { padding: clamp(28px, 4vw, 48px) 0; border-top: 1px solid var(--mist); }
+.compare h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 20px; }
+.compare-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(8px, 1.6vw, 20px); }
+.compare figure { margin: 0; }
+.compare img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 12px; }
+.compare figcaption { margin-top: 10px; font: 500 1.05rem var(--display); letter-spacing: 0.02em; }
+.compare figure:not(:first-child) figcaption { color: var(--rust); }
+@media (max-width: 520px) { .compare figcaption { font-size: 0.9rem; } }
+.pair-teaser { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: clamp(280px, 38vw, 520px); }
+.pair-teaser img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 12px; }
+@media (max-width: 760px) { .pair-teaser { width: 100%; } }
+.compare figure:last-child img { border: 1px solid var(--mist); }

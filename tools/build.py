@@ -14,7 +14,7 @@ ICON_WA = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path
 ICON_PHONE = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>'
 ICON_MAIL = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>'
 
-NAV = [("", "Hjem"), ("ourwork/", "Vårt arbeid"), ("proven-impact/", "Resultater")]
+NAV = [("", "Hjem"), ("ourwork/", "Vårt arbeid"), ("produktfoto/", "Produktfoto"), ("proven-impact/", "Resultater")]
 
 
 def page(path, title, desc, body, active, root=None):
@@ -69,6 +69,7 @@ def page(path, title, desc, body, active, root=None):
       <ul>
         <li><a href="{r}">Hjem</a></li>
         <li><a href="{r}ourwork/">Vårt arbeid</a></li>
+        <li><a href="{r}produktfoto/">Produktfoto</a></li>
         <li><a href="{r}proven-impact/">Resultater</a></li>
         <li><a href="{r}contact/">Kontakt</a></li>
       </ul>
@@ -293,6 +294,20 @@ def work():
 </section>
 
 <section class="chapter">
+  <div class="wrap feature">
+    <div>
+      <h2>Produktfoto</h2>
+      <p>Produktbilder for olivenoljeprodusenten Oliven – fotografert av oss, og videreutviklet med A.I. Se original og A.I.-versjon side om side.</p>
+      <a class="btn" href="../produktfoto/">Se produktfoto</a>
+    </div>
+    <div class="pair-teaser">
+      <img src="../img/oliven/oliven-golden-original.jpg" alt="Oliven Golden Selection – originalfoto" loading="lazy" width="1000" height="1500">
+      <img src="../img/oliven/oliven-golden-ai.jpg" alt="Oliven Golden Selection – A.I.-versjon" loading="lazy" width="1000" height="1500">
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
   <div class="wrap">
     <div class="chapter-head">
       <h2>Foto</h2>
@@ -386,6 +401,50 @@ def impact():
                 body, "proven-impact/")
 
 
+PRODUCTS = [
+    ("golden", "Golden Selection"),
+    ("golden-ok", "Golden Selection – økologisk"),
+    ("premier", "Premier Selection"),
+]
+
+
+def product():
+    rows = ""
+    for slug, name in PRODUCTS:
+        cells = ""
+        for suffix, cap in [("original", "Original"), ("ai", "A.I."), ("ai-hvit", "A.I. – hvit bakgrunn")]:
+            cells += f'<figure><img src="../img/oliven/oliven-{slug}-{suffix}.jpg" alt="Oliven {name} – {cap}" loading="lazy" width="1000" height="1500"><figcaption>{cap}</figcaption></figure>'
+        rows += f'<div class="compare"><h3>{name}</h3><div class="compare-row">{cells}</div></div>'
+    body = f"""
+<section class="page-head">
+  <div class="wrap">
+    <h1>Produktfoto</h1>
+    <p>Produktbilder for Oliven – ekstra virgin olivenolje, kaldpresset og ublandet.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Original og A.I. side om side</h2>
+      <p>Vi fotograferte flaskene, og brukte deretter A.I. for å komplementere arbeidet: jevnere lys og bakgrunn, og nye varianter av samme bilde – som en ren, hvit bakgrunn til nettbutikken. Originalen er alltid utgangspunktet. A.I. gir kunden flere bilder ut av ett og samme opptak.</p>
+    </div>
+    {rows}
+  </div>
+</section>
+
+<section class="section rust closing">
+  <div class="wrap">
+    <h2>Trenger produktene dine bedre bilder?</h2>
+    {contact_buttons()}
+  </div>
+</section>
+"""
+    return page("produktfoto/", "Produktfoto for Oliven – original og A.I. side om side — Frame Forward",
+                "Produktfoto av olivenolje for Oliven. Se originalbildene og A.I.-versjonene side om side – slik bruker Frame Forward A.I. til å komplementere arbeidet.",
+                body, "produktfoto/")
+
+
 def contact():
     body = f"""
 <section class="page-head">
@@ -438,11 +497,12 @@ def main():
     (SITE / "ourwork" / "index.html").write_text(work(), encoding="utf-8")
     (SITE / "proven-impact" / "index.html").write_text(impact(), encoding="utf-8")
     (SITE / "contact" / "index.html").write_text(contact(), encoding="utf-8")
+    (SITE / "produktfoto" / "index.html").write_text(product(), encoding="utf-8")
     (SITE / "404.html").write_text(notfound(), encoding="utf-8")
     # The CNAME file (frameforward.no) is added when the domain is moved from Squarespace.
     (SITE / ".nojekyll").write_text("")
     (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n")
-    urls = "".join(f"<url><loc>{DOMAIN}/{p}</loc></url>" for p in ["", "ourwork/", "proven-impact/", "contact/"])
+    urls = "".join(f"<url><loc>{DOMAIN}/{p}</loc></url>" for p in ["", "ourwork/", "produktfoto/", "proven-impact/", "contact/"])
     (SITE / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     print("built")
 
