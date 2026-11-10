@@ -107,3 +107,6 @@
 .page-section:has(.ffpi){padding-top:0!important;padding-bottom:0!important;min-height:0!important}
 .page-section:has(.ffpi) .content-wrapper{padding:0!important;max-width:none!important}
 .page-section:has(.ffpi) .fluid-engine{row-gap:0!important}
+/* plass til menyen øverst */
+.page-section:has(.ffpi) .ffpi .hero{padding-top:210px}
+@media(max-width:900px){.page-section:has(.ffpi) .ffpi .hero{padding-top:140px}}
