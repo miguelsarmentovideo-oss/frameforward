@@ -1,0 +1,35 @@
+<!-- FRAME FORWARD · TOPPSEKSJON PÅ FORSIDEN · Code Block (bakgrunnsvideoen ligger i seksjonen) -->
+<style>
+/* seksjonen: skjul de gamle blokkene, la kodeblokken fylle bredden */
+.page-section:has(.ffhero) .fe-block:not(:has(.ffhero)){display:none!important}
+.page-section:has(.ffhero){min-height:0!important;padding-bottom:0!important}
+.page-section:has(.ffhero) .content-wrapper{padding:0!important;max-width:none!important}
+.page-section:has(.ffhero) .fluid-engine{grid-template-rows:auto!important;row-gap:0!important}
+.fe-block:has(.ffhero){grid-area:1/1/2/-1!important}
+.fe-block:has(.ffhero) .sqs-block,.fe-block:has(.ffhero) .sqs-block-content{padding:0!important}
+.page-section:has(.ffhero) .section-background:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(26,14,9,.9) 0%,rgba(26,14,9,.62) 48%,rgba(26,14,9,.2) 100%),linear-gradient(0deg,rgba(42,24,16,1) 0%,rgba(42,24,16,0) 30%)}
+/* innhold */
+.ffhero{--b:#482B1E;--b2:#2a1810;--g:#c9a27a;font-family:Arimo,Helvetica,Arial,sans-serif;color:#fff;min-height:68vh;display:flex;align-items:center;padding:36px 0 110px;line-height:1.5}
+.ffhero *{box-sizing:border-box}
+.ffhero .w{max-width:1180px;margin:0 auto;padding:0 24px;width:100%}
+.ffhero .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(201,162,122,.55);color:#fff!important;text-decoration:none!important;font-size:14px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.ffhero .badge .st{width:28px;height:28px;border-radius:50%;background:var(--g);color:var(--b2);display:grid;place-items:center;font-size:14px}
+.ffhero h1{font-family:Oswald,Impact,sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:-.01em;line-height:1.02;font-size:clamp(46px,7vw,108px);margin:26px 0 0;max-width:980px;color:#fff}
+.ffhero h1 em{font-style:normal;color:var(--g)}
+.ffhero .lead{font-size:clamp(17px,1.5vw,21px);max-width:600px;margin:24px 0 0;opacity:.88}
+.ffhero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.ffhero .btn{display:inline-block;padding:18px 32px;border-radius:99px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:16px;text-decoration:none!important;transition:transform .15s}
+.ffhero .btn:hover{transform:translateY(-2px)}
+.ffhero .btn.g{background:var(--g);color:var(--b2)!important}
+.ffhero .btn.o{border:1.5px solid rgba(255,255,255,.65);color:#fff!important}
+@media(max-width:700px){.ffhero{min-height:0;padding:20px 0 80px}.ffhero .badge{font-size:12px}.ffhero .btn{padding:16px 24px;font-size:15px}}
+</style>
+<div class="ffhero"><div class="w">
+  <a class="badge" href="/proven-impact"><span class="st">★</span>Kåret til «SoMe Company of the Year» · Digitaldagen Bergen</a>
+  <h1>Innhold som fyller <em>bordene</em> og <em>hotellrommene</em>.</h1>
+  <p class="lead">Video og foto for restauranter, hoteller og events i Bergen. Reels som blir sett av millioner, og innhold som får folk til å booke.</p>
+  <div class="btns">
+    <a class="btn g" href="/contact">Book en samtale</a>
+    <a class="btn o" href="/ourwork">Se arbeidet vårt →</a>
+  </div>
+</div></div>
