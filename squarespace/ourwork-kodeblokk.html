@@ -1,0 +1,163 @@
+<!-- FRAME FORWARD · VÅRT ARBEID · Code Block -->
+<style>
+.fe-block:has(.ffw){grid-column:1/-1!important}
+.fe-block:has(.ffw) .sqs-block,.fe-block:has(.ffw) .sqs-block-content{padding:0!important}
+.page-section:has(.ffw){padding-top:0!important;padding-bottom:0!important;min-height:0!important}
+.page-section:has(.ffw) .content-wrapper{padding:0!important;max-width:none!important}
+.page-section:has(.ffw) .fluid-engine{row-gap:0!important}
+.ffw{--b:#482B1E;--b2:#2a1810;--c:#f6efe7;--g:#c9a27a;--t:#1d120c;font-family:Arimo,Helvetica,Arial,sans-serif;color:var(--t);line-height:1.5;overflow:hidden}
+.ffw *{box-sizing:border-box}
+.ffw h1,.ffw h2,.ffw h3{font-family:Oswald,Impact,sans-serif;font-weight:500;letter-spacing:-.01em;margin:0;line-height:1.04;text-transform:uppercase}
+.ffw p{margin:0}
+.ffw a{text-decoration:none!important}
+.ffw .w{max-width:1180px;margin:0 auto;padding:0 24px}
+.ffw .ey{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:13px;color:var(--g);margin-bottom:14px;display:block}
+.ffw section{padding:88px 0;scroll-margin-top:120px}
+.ffw .h2{font-size:clamp(34px,4.6vw,58px)}
+.ffw .lead{font-size:18px;max-width:560px;margin-top:14px;opacity:.85}
+.ffw video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
+/* HERO */
+.ffw .hero{background:var(--b2);color:#fff;padding:210px 0 72px}
+.ffw .hero h1{font-size:clamp(46px,6.6vw,96px);max-width:900px}
+.ffw .hero h1 em{font-style:normal;color:var(--g)}
+.ffw .hero .lead{opacity:.8;font-size:19px;max-width:620px;margin-top:22px}
+.ffw .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.ffw .chips a{padding:10px 18px;border-radius:99px;border:1px solid rgba(201,162,122,.5);color:#fff!important;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:14px;transition:background .15s}
+.ffw .chips a:hover{background:rgba(201,162,122,.2)}
+/* RESTAURANTER */
+.ffw .rest{background:var(--c)}
+.ffw .rest .h2{color:var(--b)}
+.ffw .vg{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}
+.ffw .v9{position:relative;aspect-ratio:9/16;border-radius:18px;overflow:hidden;box-shadow:0 18px 36px -22px rgba(42,24,16,.6)}
+.ffw .wide{display:grid;grid-template-columns:1.7fr 1fr;gap:40px;align-items:center;margin-top:56px}
+.ffw .v16{aspect-ratio:16/9;border-radius:20px;overflow:hidden;box-shadow:0 18px 36px -22px rgba(42,24,16,.6)}
+.ffw .wide h3{font-size:30px;color:var(--b)}
+.ffw .wide p{margin-top:10px;font-size:16px;opacity:.85}
+/* EVENT + UTELIV */
+.ffw .duo{background:var(--b2);color:#fff}
+.ffw .dg{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.ffw .dc{display:grid;grid-template-columns:.9fr 1fr;gap:24px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:20px;scroll-margin-top:120px}
+.ffw .dc h2{font-size:clamp(26px,2.4vw,34px)}
+.ffw .dc p{opacity:.78;margin-top:12px;font-size:16px}
+/* DRONE */
+.ffw .drone{position:relative;padding:0;background:#000;color:#fff}
+.ffw .drone .vid{height:min(76vh,720px)}
+.ffw .drone .ov{position:absolute;inset:0;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(26,14,9,.85),rgba(26,14,9,0) 55%);pointer-events:none}
+.ffw .drone .ov .w{width:100%;padding-bottom:56px}
+.ffw .drone .h2{font-size:clamp(40px,6vw,80px)}
+.ffw .drone p{max-width:520px;margin-top:10px;opacity:.85;font-size:17px}
+/* FOTO */
+.ffw .foto{background:#fff}
+.ffw .foto .h2{color:var(--b)}
+.ffw .mas{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.ffw .mas img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:14px;transition:transform .25s}
+.ffw .mas img:hover{transform:scale(1.02)}
+/* PRODUKTFOTO */
+.ffw .prod{background:var(--c)}
+.ffw .pg{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center}
+.ffw .prod .h2{color:var(--b)}
+.ffw .ba{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ffw .ba figure{margin:0;position:relative}
+.ffw .ba img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block}
+.ffw .ba figcaption{position:absolute;top:12px;left:12px;background:rgba(42,24,16,.85);color:#fff;font-family:Oswald,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:99px}
+.ffw .ba figure:last-child figcaption{background:var(--g);color:var(--b2)}
+.ffw .lnk{display:inline-block;margin-top:22px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:15px;color:var(--b)!important;border-bottom:2px solid var(--g);padding-bottom:3px}
+/* CTA */
+.ffw .cta{background:var(--b);color:#fff;text-align:center}
+.ffw .cta .h2{font-size:clamp(36px,5.4vw,70px)}
+.ffw .cta p{opacity:.8;margin:18px auto 0;max-width:560px;font-size:18px}
+.ffw .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.ffw .btn{display:inline-block;padding:17px 30px;border-radius:99px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:16px}
+.ffw .btn.g{background:var(--g);color:var(--b2)!important}
+.ffw .btn.s{border:1.5px solid rgba(255,255,255,.6);color:#fff!important}
+@media(max-width:900px){
+.ffw section{padding:64px 0}
+.ffw .hero{padding:150px 0 56px}
+.ffw .vg{grid-template-columns:repeat(5,64%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.ffw .v9{scroll-snap-align:start}
+.ffw .wide,.ffw .dg,.ffw .pg{grid-template-columns:1fr;gap:24px}
+.ffw .dc{grid-template-columns:1fr 1.1fr;gap:16px;padding:14px}
+.ffw .drone .vid{height:62vh}
+.ffw .mas{grid-template-columns:1fr 1fr;gap:8px}
+}
+@media(max-width:520px){.ffw .dc{grid-template-columns:1fr}.ffw .dc .v9{max-width:300px}}
+</style>
+<div class="ffw">
+
+<section class="hero"><div class="w">
+  <span class="ey">Vårt arbeid</span>
+  <h1>Video og foto som får folk til å <em>komme</em></h1>
+  <p class="lead">Reels, eventfilm, dronefilm og foto for restauranter, barer og hoteller i Bergen. Trykk på en video for å se den med lyd.</p>
+  <div class="chips"><a href="#restauranter">Restauranter</a><a href="#eventer">Eventer</a><a href="#uteliv">Uteliv</a><a href="#drone">Dronefilm</a><a href="#foto">Foto</a><a href="#produktfoto">Produktfoto</a></div>
+</div></section>
+
+<section class="rest" id="restauranter"><div class="w">
+  <span class="ey" style="color:var(--b)">Restauranter</span>
+  <h2 class="h2">Sjelen i kjøkkenet, på video</h2>
+  <p class="lead">Fra kokkeintervjuer og anretning bak kulissene til stemningen i hele restauranten.</p>
+  <div class="vg">
+    <div class="v9"><video src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/video/web/restaurant-2.mp4" poster="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/poster-restaurant-2.webp" autoplay muted loop playsinline controls preload="metadata"></video></div>
+    <div class="v9"><video src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/video/web/restaurant-1.mp4" poster="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/poster-restaurant-1.webp" autoplay muted loop playsinline controls preload="metadata"></video></div>
+    <div class="v9"><video src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/video/web/restaurant-4.mp4" poster="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/poster-restaurant-4.webp" autoplay muted loop playsinline controls preload="metadata"></video></div>
+    <div class="v9"><video src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/video/web/restaurant-5.mp4" poster="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/poster-restaurant-5.webp" autoplay muted loop playsinline controls preload="metadata"></video></div>
+    <div class="v9"><video src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/video/web/restaurant-3.mp4" poster="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/poster-restaurant-3.webp" autoplay muted loop playsinline controls preload="metadata"></video></div>
+  </div>
+  <div class="wide">
+    <div class="v16"><video src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/video/web/restaurant-6-wide.mp4" poster="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/poster-restaurant-6-wide.webp" autoplay muted loop playsinline controls preload="metadata"></video></div>
+    <div><span class="ey" style="color:var(--b)">Bak kulissene</span><h3>Samme stemning, større lerret</h3><p>Liggende format for nettsider, skjermer og YouTube.</p></div>
+  </div>
+</div></section>
+
+<section class="duo"><div class="w dg">
+  <div class="dc" id="eventer">
+    <div class="v9"><video src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/video/web/eventer-nores.mp4" poster="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/poster-eventer-nores.webp" autoplay muted loop playsinline controls preload="metadata"></video></div>
+    <div><span class="ey">Eventer</span><h2>En hel kveld på ett minutt</h2><p>Vinsmaking fortalt gjennom folk, produkter og stemning, klippet så neste event selger seg selv.</p></div>
+  </div>
+  <div class="dc" id="uteliv">
+    <div class="v9"><video src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/video/web/uteliv-old-irish-pub.mp4" poster="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/poster-uteliv-old-irish-pub.webp" autoplay muted loop playsinline controls preload="metadata"></video></div>
+    <div><span class="ey">Uteliv</span><h2>Fullt lokale, ekte energi</h2><p>The Old Irish Pub: livemusikk og stemningen som får folk til å komme tilbake neste helg.</p></div>
+  </div>
+</div></section>
+
+<section class="drone" id="drone">
+  <div class="vid"><video src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/video/web/dronefilm.mp4" poster="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/poster-dronefilm.webp" autoplay muted loop playsinline preload="metadata"></video></div>
+  <div class="ov"><div class="w"><span class="ey">Dronefilm</span><h2 class="h2">Sett ovenfra</h2><p>Luftfoto og dronevideo for eiendom, hoteller og beliggenheter som fortjener å ses fra lufta.</p></div></div>
+</section>
+
+<section class="foto" id="foto"><div class="w">
+  <span class="ey" style="color:var(--b)">Foto</span>
+  <h2 class="h2">Mat, interiør og folk</h2>
+  <p class="lead">Bilder som fungerer i feeden, på nettsiden og på menyen.</p>
+  <div class="mas">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc06897-hdr-2.webp" alt="Restaurantfoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc07193.webp" alt="Matfoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc06420.webp" alt="Matfoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc4790.webp" alt="Interiørfoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc06345.webp" alt="Kokk med tallerken" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc00558-hdr.webp" alt="Interiørfoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc02162-hdr.webp" alt="Interiørfoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc01307.webp" alt="Matfoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dji-fly-20240927-103214-0024-1727426403673-photo.webp" alt="Dronefoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc00492.webp" alt="Matfoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc00275.webp" alt="Restaurantfoto" loading="lazy">
+    <img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/ourwork-dsc07976.webp" alt="Matfoto" loading="lazy">
+  </div>
+</div></section>
+
+<section class="prod" id="produktfoto"><div class="w pg">
+  <div><span class="ey" style="color:var(--b)">Produktfoto</span><h2 class="h2">Ett opptak, flere bilder</h2>
+    <p class="lead">Produktbilder for olivenoljeprodusenten Oliven, fotografert av oss og videreutviklet med A.I. Kunden får flere bilder fra samme opptak.</p>
+    <a class="lnk" href="/produktfoto">Se hele Oliven-prosjektet →</a></div>
+  <div class="ba">
+    <figure><img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/oliven/oliven-golden-original.jpg" alt="Oliven – originalbilde" loading="lazy"><figcaption>Original</figcaption></figure>
+    <figure><img src="https://cdn.jsdelivr.net/gh/miguelsarmentovideo-oss/frameforward@a6e54d9/img/oliven/oliven-golden-ai.jpg" alt="Oliven – A.I.-versjon" loading="lazy"><figcaption>A.I.-versjon</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="cta"><div class="w">
+  <h2 class="h2">Vil du ha noe lignende?</h2>
+  <p>Fortell oss om stedet ditt, så foreslår vi hva vi kan lage. Ring eller send en e-post, så svarer vi samme dag.</p>
+  <div class="btns"><a class="btn g" href="/contact">Book en samtale</a><a class="btn s" href="tel:+4741357424">Ring 413 57 424</a></div>
+</div></section>
+
+</div>
