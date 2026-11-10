@@ -1,4 +1,4 @@
-.ffpi{--b:#482B1E;--b2:#2a1810;--c:#f6efe7;--g:#c9a27a;--t:#1d120c;font-family:Arimo,Helvetica,Arial,sans-serif;color:var(--t);width:100vw;position:relative;left:50%;margin-left:-50vw;overflow:hidden;line-height:1.5}
+.ffpi{--b:#482B1E;--b2:#2a1810;--c:#f6efe7;--g:#c9a27a;--t:#1d120c;font-family:Arimo,Helvetica,Arial,sans-serif;color:var(--t);width:100%;position:relative;overflow:hidden;line-height:1.5}
 .ffpi *{box-sizing:border-box}
 .ffpi h2,.ffpi h3,.ffpi .n{font-family:Oswald,Impact,sans-serif;font-weight:500;letter-spacing:-.01em;margin:0;line-height:1.05}
 .ffpi p{margin:0}
@@ -101,3 +101,9 @@
 .ffpi .row{grid-template-columns:1fr 64px;gap:4px 10px;font-size:13px}.ffpi .row .trk{grid-column:1/-1;grid-row:2}.ffpi .row .num{display:none}
 }
 @media(max-width:560px){.ffpi .cards{grid-template-columns:1fr}.ffpi .fromto .n{font-size:40px}}
+/* Squarespace: la kodeblokken dekke hele bredden */
+.fe-block:has(.ffpi){grid-column:1/-1!important;grid-row-start:1!important}
+.fe-block:has(.ffpi) .sqs-block,.fe-block:has(.ffpi) .sqs-block-content{padding:0!important}
+.page-section:has(.ffpi){padding-top:0!important;padding-bottom:0!important;min-height:0!important}
+.page-section:has(.ffpi) .content-wrapper{padding:0!important;max-width:none!important}
+.page-section:has(.ffpi) .fluid-engine{row-gap:0!important}
