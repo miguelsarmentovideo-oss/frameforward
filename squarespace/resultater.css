@@ -87,7 +87,7 @@
 .ffpi .cta p{opacity:.8;margin:18px auto 0;max-width:560px;font-size:18px}
 .ffpi .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
 .ffpi .btn{display:inline-block;padding:17px 30px;border-radius:99px;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:16px;text-decoration:none!important}
-.ffpi .btn.p{background:#25D366;color:#08321a!important}
+.ffpi .btn.p{background:var(--g);color:var(--b2)!important}
 .ffpi .btn.s{border:1.5px solid rgba(255,255,255,.6);color:#fff!important}
 /* MOBILE */
 @media(max-width:900px){
